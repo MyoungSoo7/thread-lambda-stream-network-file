@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 public class UserInfo implements java.io.Serializable {
 	String name;
 	String password;

@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_14 {
@@ -8,7 +10,7 @@ class Ex15_14 {
 		try {
 			fos = new FileOutputStream("test.txt");
 			ps = new PrintStream(fos);
-			System.setOut(ps);    //  System.outÀÇ Ãâ·Â´ë»óÀ» test.txtÆÄÀÏ·Î º¯°æ
+			System.setOut(ps);    //  System.outï¿½ï¿½ ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ test.txtï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½
 		} catch(FileNotFoundException e) {
 			System.err.println("File not found.");
 		}

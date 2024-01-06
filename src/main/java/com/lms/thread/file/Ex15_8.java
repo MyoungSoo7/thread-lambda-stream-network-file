@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_8 {
@@ -8,14 +10,14 @@ class Ex15_8 {
 			FileReader fr = new FileReader(fileName);
 
 			int data =0;
-			// FileInputStreamÀ» ÀÌ¿ëÇØ¼­ ÆÄÀÏ³»¿ëÀ» ÀÐ¾î È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+			// FileInputStreamï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 			while((data=fis.read())!=-1) {
 				System.out.print((char)data);
 			}
 			System.out.println();
 			fis.close();
 
-			// FileReader¸¦ ÀÌ¿ëÇØ¼­ ÆÄÀÏ³»¿ëÀ» ÀÐ¾î È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+			// FileReaderï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 			while((data=fr.read())!=-1)
 				System.out.print((char)data);
 			System.out.println();

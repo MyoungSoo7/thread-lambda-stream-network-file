@@ -1,3 +1,5 @@
+package com.lms.thread.lambda;
+
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
@@ -6,9 +8,9 @@ import static java.util.Comparator.*;
 
 class Student3 {
 	String name;
-	boolean isMale; // ¼ºº°
-	int hak;        // ÇÐ³â
-	int ban;        // ¹Ý
+	boolean isMale; // ï¿½ï¿½ï¿½ï¿½
+	int hak;        // ï¿½Ð³ï¿½
+	int ban;        // ï¿½ï¿½
 	int score;
 
 	Student3(String name, boolean isMale, int hak, int ban, int score) { 
@@ -26,7 +28,7 @@ class Student3 {
 	int		getScore()	 { return score;   }
 
 	public String toString() {
-		return String.format("[%s, %s, %dÇÐ³â %d¹Ý, %3dÁ¡]", name, isMale ? "³²" : "¿©", hak, ban, score);
+		return String.format("[%s, %s, %dï¿½Ð³ï¿½ %dï¿½ï¿½, %3dï¿½ï¿½]", name, isMale ? "ï¿½ï¿½" : "ï¿½ï¿½", hak, ban, score);
 	}
 
 	enum Level {
@@ -37,28 +39,28 @@ class Student3 {
 class Ex14_11 {
 	public static void main(String[] args) {
 		Student3[] stuArr = {
-			new Student3("³ªÀÚ¹Ù", true,  1, 1, 300),	
-			new Student3("±èÁö¹Ì", false, 1, 1, 250),	
-			new Student3("±èÀÚ¹Ù", true,  1, 1, 200),	
-			new Student3("ÀÌÁö¹Ì", false, 1, 2, 150),	
-			new Student3("³²ÀÚ¹Ù", true,  1, 2, 100),	
-			new Student3("¾ÈÁö¹Ì", false, 1, 2,  50),	
-			new Student3("È²Áö¹Ì", false, 1, 3, 100),	
-			new Student3("°­Áö¹Ì", false, 1, 3, 150),	
-// µÞ ÆäÀÌÁö¿¡ °è¼ÓµË´Ï´Ù.
-			new Student3("ÀÌÀÚ¹Ù", true,  1, 3, 200),	
-			new Student3("³ªÀÚ¹Ù", true,  2, 1, 300),	
-			new Student3("±èÁö¹Ì", false, 2, 1, 250),	
-			new Student3("±èÀÚ¹Ù", true,  2, 1, 200),	
-			new Student3("ÀÌÁö¹Ì", false, 2, 2, 150),	
-			new Student3("³²ÀÚ¹Ù", true,  2, 2, 100),	
-			new Student3("¾ÈÁö¹Ì", false, 2, 2,  50),	
-			new Student3("È²Áö¹Ì", false, 2, 3, 100),	
-			new Student3("°­Áö¹Ì", false, 2, 3, 150),	
-			new Student3("ÀÌÀÚ¹Ù", true,  2, 3, 200)	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  1, 1, 300),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 1, 250),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  1, 1, 200),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 2, 150),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  1, 2, 100),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 2,  50),	
+			new Student3("È²ï¿½ï¿½ï¿½ï¿½", false, 1, 3, 100),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 3, 150),	
+// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÓµË´Ï´ï¿½.
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  1, 3, 200),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  2, 1, 300),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 1, 250),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  2, 1, 200),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 2, 150),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  2, 2, 100),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 2,  50),	
+			new Student3("È²ï¿½ï¿½ï¿½ï¿½", false, 2, 3, 100),	
+			new Student3("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 3, 150),	
+			new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", true,  2, 3, 200)	
 		};
 
-		System.out.printf("1. ´Ü¼ø±×·ìÈ­(¹Ýº°·Î ±×·ìÈ­)%n");
+		System.out.printf("1. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­(ï¿½Ýºï¿½ï¿½ï¿½ ï¿½×·ï¿½È­)%n");
 		Map<Integer, List<Student3>> stuByBan = Stream.of(stuArr)
 				.collect(groupingBy(Student3::getBan));
 
@@ -68,7 +70,7 @@ class Ex14_11 {
 			}
 		}
 
-		System.out.printf("%n2. ´Ü¼ø±×·ìÈ­(¼ºÀûº°·Î ±×·ìÈ­)%n");
+		System.out.printf("%n2. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½È­)%n");
 		Map<Student3.Level, List<Student3>> stuByLevel = Stream.of(stuArr)
 				.collect(groupingBy(s-> {
 						 if(s.getScore() >= 200) return Student3.Level.HIGH;
@@ -86,7 +88,7 @@ class Ex14_11 {
 			System.out.println();
 		}
 
-		System.out.printf("%n3. ´Ü¼ø±×·ìÈ­ + Åë°è(¼ºÀûº° ÇÐ»ý¼ö)%n");
+		System.out.printf("%n3. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð»ï¿½ï¿½ï¿½)%n");
 		Map<Student3.Level, Long> stuCntByLevel = Stream.of(stuArr)
 				.collect(groupingBy(s-> {
 					     if(s.getScore() >= 200) return Student3.Level.HIGH;
@@ -94,7 +96,7 @@ class Ex14_11 {
 					else                         return Student3.Level.LOW;
 				}, counting()));
 		for(Student3.Level key : stuCntByLevel.keySet())
-			System.out.printf("[%s] - %d¸í, ", key, stuCntByLevel.get(key));
+			System.out.printf("[%s] - %dï¿½ï¿½, ", key, stuCntByLevel.get(key));
 		System.out.println();
 /*
 		for(List<Student3> level : stuByLevel.values()) {
@@ -104,7 +106,7 @@ class Ex14_11 {
 			}
 		}
 */
-		System.out.printf("%n4. ´ÙÁß±×·ìÈ­(ÇÐ³âº°, ¹Ýº°)");
+		System.out.printf("%n4. ï¿½ï¿½ï¿½ß±×·ï¿½È­(ï¿½Ð³âº°, ï¿½Ýºï¿½)");
 		Map<Integer, Map<Integer, List<Student3>>> stuByHakAndBan =
           Stream.of(stuArr)
 				.collect(groupingBy(Student3::getHak,
@@ -119,7 +121,7 @@ class Ex14_11 {
 			}
 		}
 
-		System.out.printf("%n5. ´ÙÁß±×·ìÈ­ + Åë°è(ÇÐ³âº°, ¹Ýº° 1µî)%n");
+		System.out.printf("%n5. ï¿½ï¿½ï¿½ß±×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½Ð³âº°, ï¿½Ýºï¿½ 1ï¿½ï¿½)%n");
 		Map<Integer, Map<Integer, Student3>> topStuByHakAndBan =
           Stream.of(stuArr)
 				.collect(groupingBy(Student3::getHak,
@@ -135,8 +137,8 @@ class Ex14_11 {
 			for(Student3 s : ban.values())
 				System.out.println(s);
 
-// µÞ ÆäÀÌÁö¿¡ °è¼ÓµË´Ï´Ù.
-		System.out.printf("%n6. ´ÙÁß±×·ìÈ­ + Åë°è(ÇÐ³âº°, ¹Ýº° ¼ºÀû±×·ì)%n");
+// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÓµË´Ï´ï¿½.
+		System.out.printf("%n6. ï¿½ï¿½ï¿½ß±×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½Ð³âº°, ï¿½Ýºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½×·ï¿½)%n");
 		Map<String, Set<Student3.Level>> stuByScoreGroup = Stream.of(stuArr)
 			.collect(groupingBy(s-> s.getHak() + "-" + s.getBan(),
 					mapping(s-> {
@@ -151,5 +153,5 @@ class Ex14_11 {
 		for(String key : keySet2) {
 			System.out.println("["+key+"]" + stuByScoreGroup.get(key));
 		}
-	}  // mainÀÇ ³¡
+	}  // mainï¿½ï¿½ ï¿½ï¿½
 }

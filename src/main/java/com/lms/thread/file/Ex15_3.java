@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 import java.util.Arrays;
 
@@ -5,7 +7,7 @@ class Ex15_3 {
 	public static void main(String[] args) {
 		byte[] inSrc = {0,1,2,3,4,5,6,7,8,9};
 		byte[] outSrc = null;
-		byte[] temp = new byte[4];	// ÀÌÀü ¿¹Á¦¿Í ¹è¿­ÀÇ Å©±â°¡ ´Ù¸£´Ù.
+		byte[] temp = new byte[4];	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ Å©ï¿½â°¡ ï¿½Ù¸ï¿½ï¿½ï¿½.
 
 		ByteArrayInputStream  input  = null;
 		ByteArrayOutputStream output = null;
@@ -24,7 +26,7 @@ class Ex15_3 {
 				printArrays(temp, outSrc);
 			}
 		} catch(IOException e) {}
-	} // mainÀÇ ³¡
+	} // mainï¿½ï¿½ ï¿½ï¿½
 
 	static void printArrays(byte[] temp, byte[] outSrc) {
 		System.out.println("temp          :" +Arrays.toString(temp));

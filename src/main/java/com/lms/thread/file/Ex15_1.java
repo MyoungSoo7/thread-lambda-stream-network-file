@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 import java.util.Arrays;
 
@@ -17,7 +19,7 @@ class Ex15_1 {
 		while((data = input.read())!=-1)
 			output.write(data);	// void write(int b)
 
-		outSrc = output.toByteArray(); // ½ºÆ®¸²ÀÇ ³»¿ëÀ» byte¹è¿­·Î ¹ÝÈ¯ÇÑ´Ù.
+		outSrc = output.toByteArray(); // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ byteï¿½è¿­ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 
 		System.out.println("Input Source  :" + Arrays.toString(inSrc));
 		System.out.println("Output Source :" + Arrays.toString(outSrc));

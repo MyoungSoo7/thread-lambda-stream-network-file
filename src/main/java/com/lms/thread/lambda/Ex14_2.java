@@ -1,3 +1,5 @@
+package com.lms.thread.lambda;
+
 import java.util.function.*;
 import java.util.*;
 
@@ -6,7 +8,7 @@ class Ex14_2 {
 		Supplier<Integer>  s = ()-> (int)(Math.random()*100)+1;
 		Consumer<Integer>  c = i -> System.out.print(i+", "); 
 		Predicate<Integer> p = i -> i%2==0; 
-		Function<Integer, Integer> f = i -> i/10*10; // iÀÇ ÀÏÀÇ ÀÚ¸®¸¦ ¾ø¾Ø´Ù.
+		Function<Integer, Integer> f = i -> i/10*10; // iï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½.
 		
 		List<Integer> list = new ArrayList<>();	
 		makeRandomList(s, list);

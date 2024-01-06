@@ -1,3 +1,5 @@
+package com.lms.thread.network;
+
 import java.net.*;
 import java.io.*;
 
@@ -6,15 +8,15 @@ public class UdpClient {
 		DatagramSocket datagramSocket = new DatagramSocket();
 		InetAddress    serverAddress  = InetAddress.getByName("127.0.0.1");
 
-		// µ¥ÀÌÅÍ°¡ ÀúÀåµÉ °ø°£À¸·Î byte¹è¿­À» »ý¼ºÇÑ´Ù.
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ byteï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		byte[] msg = new byte[100];
 
 		DatagramPacket outPacket =
                         new DatagramPacket(msg, 1, serverAddress, 7777);
 		DatagramPacket inPacket = new DatagramPacket(msg, msg.length);
 
-		datagramSocket.send(outPacket);    // DatagramPacketÀ» Àü¼ÛÇÑ´Ù.
-		datagramSocket.receive(inPacket);  // DatagramPacketÀ» ¼ö½ÅÇÑ´Ù.
+		datagramSocket.send(outPacket);    // DatagramPacketï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+		datagramSocket.receive(inPacket);  // DatagramPacketï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 
 		System.out.println("current server time :"
                                       + new String(inPacket.getData()));

@@ -1,3 +1,5 @@
+package com.lms.thread.lambda;
+
 import java.util.*;
 
 class Ex14_8 {
@@ -21,8 +23,8 @@ class Ex14_8 {
 		Optional.of("456").map(Integer::parseInt)
 					      .ifPresent(x->System.out.printf("result3=%d%n",x));
 
-		OptionalInt optInt1  = OptionalInt.of(0);   // 0À» ÀúÀå
-		OptionalInt optInt2  = OptionalInt.empty(); // ºó °´Ã¼¸¦ »ý¼º
+		OptionalInt optInt1  = OptionalInt.of(0);   // 0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		OptionalInt optInt2  = OptionalInt.empty(); // ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 		System.out.println(optInt1.isPresent());   // true
 		System.out.println(optInt2.isPresent());   // false

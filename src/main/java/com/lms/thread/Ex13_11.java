@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 class Ex13_11 {
 	static long startTime = 0;
 
@@ -9,11 +11,11 @@ class Ex13_11 {
 		startTime = System.currentTimeMillis();
 
 		try {
-			th1.join();	// main¾²·¹µå°¡ th1ÀÇ ÀÛ¾÷ÀÌ ³¡³¯ ¶§±îÁö ±â´Ù¸°´Ù.
-			th2.join();	// main¾²·¹µå°¡ th2ÀÇ ÀÛ¾÷ÀÌ ³¡³¯ ¶§±îÁö ±â´Ù¸°´Ù.
+			th1.join();	// mainï¿½ï¿½ï¿½ï¿½ï¿½å°¡ th1ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½.
+			th2.join();	// mainï¿½ï¿½ï¿½ï¿½ï¿½å°¡ th2ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½.
 		} catch(InterruptedException e) {}
 
-		System.out.print("¼Ò¿ä½Ã°£:" + (System.currentTimeMillis() - Ex13_11.startTime));
+		System.out.print("ï¿½Ò¿ï¿½Ã°ï¿½:" + (System.currentTimeMillis() - Ex13_11.startTime));
 	} // main
 }
 

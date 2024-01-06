@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 class Ex13_3 {
 	static long startTime = 0;
 
@@ -9,7 +11,7 @@ class Ex13_3 {
 		for(int i=0; i < 300; i++)
 			System.out.printf("%s", new String("-"));	
 
-		System.out.print("¼Ò¿ä½Ã°£1:" + (System.currentTimeMillis() - Ex13_3.startTime));
+		System.out.print("ï¿½Ò¿ï¿½Ã°ï¿½1:" + (System.currentTimeMillis() - Ex13_3.startTime));
 	} 
 }
 
@@ -18,6 +20,6 @@ class ThreadEx3_1 extends Thread {
 		for(int i=0; i < 300; i++)
 			System.out.printf("%s", new String("|"));	
 
-		System.out.print("¼Ò¿ä½Ã°£2:" + (System.currentTimeMillis() - Ex13_3.startTime));
+		System.out.print("ï¿½Ò¿ï¿½Ã°ï¿½2:" + (System.currentTimeMillis() - Ex13_3.startTime));
 	}
 }

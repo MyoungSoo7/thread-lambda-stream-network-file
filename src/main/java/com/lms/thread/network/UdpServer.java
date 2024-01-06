@@ -1,3 +1,5 @@
+package com.lms.thread.network;
+
 import java.net.*;
 import java.io.*;
 import java.util.Date;
@@ -5,7 +7,7 @@ import java.text.SimpleDateFormat;
 
 public class UdpServer {
 	public void start() throws IOException {
-		// Æ÷Æ® 7777¹øÀ» »ç¿ëÇÏ´Â ¼ÒÄÏÀ» »ý¼ºÇÑ´Ù.
+		// ï¿½ï¿½Æ® 7777ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		DatagramSocket socket = new DatagramSocket(7777);
 		DatagramPacket inPacket, outPacket;
 
@@ -13,20 +15,20 @@ public class UdpServer {
 		byte[] outMsg;
 
 		while(true) {
-			// µ¥ÀÌÅÍ¸¦ ¼ö½ÅÇÏ±â À§ÇÑ ÆÐÅ¶À» »ý¼ºÇÑ´Ù.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 			inPacket = new DatagramPacket(inMsg, inMsg.length);
-			socket.receive(inPacket); // ÆÐÅ¶À» ÅëÇØ µ¥ÀÌÅÍ¸¦ ¼ö½Å(receive)ÇÑ´Ù.
+			socket.receive(inPacket); // ï¿½ï¿½Å¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½(receive)ï¿½Ñ´ï¿½.
 
-			// ¼ö½ÅÇÑ ÆÐÅ¶À¸·Î ºÎÅÍ clientÀÇ IPÁÖ¼Ò¿Í Port¸¦ ¾ò´Â´Ù.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ clientï¿½ï¿½ IPï¿½Ö¼Ò¿ï¿½ Portï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
 			InetAddress address = inPacket.getAddress();
 			int port = inPacket.getPort();
 
-			// ¼­¹öÀÇ ÇöÀç ½Ã°£À» ½ÃºÐÃÊ ÇüÅÂ([hh:mm:ss])·Î ¹ÝÈ¯ÇÑ´Ù.			
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Ãºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½([hh:mm:ss])ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.			
 			SimpleDateFormat sdf = new SimpleDateFormat("[hh:mm:ss]");
 			String time = sdf.format(new Date());
-			outMsg = time.getBytes(); // timeÀ» byte¹è¿­·Î º¯È¯ÇÑ´Ù.
+			outMsg = time.getBytes(); // timeï¿½ï¿½ byteï¿½è¿­ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 
-			// ÆÐÅ¶À» »ý¼ºÇØ¼­ client¿¡°Ô Àü¼Û(send)ÇÑ´Ù.
+			// ï¿½ï¿½Å¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ clientï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(send)ï¿½Ñ´ï¿½.
 			outPacket = new DatagramPacket(outMsg, outMsg.length, address, port);
 			socket.send(outPacket);
 		}
@@ -34,7 +36,7 @@ public class UdpServer {
 
 	public static void main(String args[]) {
 		try {  
-			new UdpServer().start();  // UDP¼­¹ö¸¦ ½ÇÇà½ÃÅ²´Ù.
+			new UdpServer().start();  // UDPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 import java.util.ArrayList;
 
 class Customer implements Runnable {
@@ -42,7 +44,7 @@ class Table {
 	String[] dishNames = { "donut","donut","burger" };
 	final int MAX_FOOD = 6;
 	private ArrayList<String> dishes = new ArrayList<>();
-	public synchronized void add(String dish) { // synchronized¸¦ Ãß°¡
+	public synchronized void add(String dish) { // synchronizedï¿½ï¿½ ï¿½ß°ï¿½
 		if(dishes.size() >= MAX_FOOD)	
 			return;
 		dishes.add(dish);
@@ -72,7 +74,7 @@ class Table {
 
 class Ex13_14 {
 	public static void main(String[] args) throws Exception {
-		Table table = new Table(); // ¿©·¯ ¾²·¹µå°¡ °øÀ¯ÇÏ´Â °´Ã¼
+		Table table = new Table(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ã¼
 
 		new Thread(new Cook(table), "COOK").start();
 		new Thread(new Customer(table, "donut"),  "CUST1").start();

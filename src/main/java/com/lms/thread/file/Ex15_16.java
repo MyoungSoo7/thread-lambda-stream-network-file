@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_16 {
@@ -10,7 +12,7 @@ class Ex15_16 {
 		File f = new File(args[0]);
 
 		if(!f.exists() || !f.isDirectory()) {
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
+			System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½Ô´Ï´ï¿½.");
 			System.exit(0);
 		} 
 

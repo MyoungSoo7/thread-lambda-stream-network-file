@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -10,7 +12,7 @@ public class Ex15_21 {
 
 			ObjectInputStream in = new ObjectInputStream(bis);
 
-			// °´Ã¼¸¦ ÀÐÀ» ¶§´Â Ãâ·ÂÇÑ ¼ø¼­¿Í ÀÏÄ¡ÇØ¾ßÇÑ´Ù.
+			// ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
 			UserInfo u1 = (UserInfo)in.readObject();
 			UserInfo u2 = (UserInfo)in.readObject();
 			ArrayList list = (ArrayList)in.readObject();

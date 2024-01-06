@@ -1,17 +1,19 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_6 {
 	public static void main(String args[]) {
 		try {
 		     FileOutputStream fos = new FileOutputStream("123.txt");
-		     // BufferedOutputStreamÀÇ ¹öÆÛ Å©±â¸¦ 5·Î ÇÑ´Ù.
+		     // BufferedOutputStreamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â¸¦ 5ï¿½ï¿½ ï¿½Ñ´ï¿½.
 		     BufferedOutputStream bos = new BufferedOutputStream(fos, 5);
-		     // ÆÄÀÏ 123.txt¿¡  1 ºÎÅÍ 9±îÁö Ãâ·ÂÇÑ´Ù.
+		     // ï¿½ï¿½ï¿½ï¿½ 123.txtï¿½ï¿½  1 ï¿½ï¿½ï¿½ï¿½ 9ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		     for(int i='1'; i <= '9'; i++) {
 			     bos.write(i);
 		     }
 
-		     fos.close();  // FileOutputStreamÀ» ´Ý´Â´Ù
+		     fos.close();  // FileOutputStreamï¿½ï¿½ ï¿½Ý´Â´ï¿½
 		} catch (IOException e) {
 		     e.printStackTrace();		
 		}

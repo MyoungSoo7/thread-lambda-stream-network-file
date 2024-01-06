@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 class Ex13_6 {
 	public static void main(String args[]) {
 		ThreadEx6_1 th1 = new ThreadEx6_1();

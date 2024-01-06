@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 import java.util.ArrayList;
 
 class Customer2 implements Runnable {
@@ -35,7 +37,7 @@ class Cook2 implements Runnable {
 }
 
 class Table2 {
-	String[] dishNames = { "donut","donut","burger" }; // donutÀÇ È®·üÀ» ³ôÀÎ´Ù.
+	String[] dishNames = { "donut","donut","burger" }; // donutï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½.
 	final int MAX_FOOD = 6;
 	private ArrayList<String> dishes = new ArrayList<>();
 
@@ -44,12 +46,12 @@ class Table2 {
 				String name = Thread.currentThread().getName();
 				System.out.println(name+" is waiting.");
 				try {
-					wait(); // COOK¾²·¹µå¸¦ ±â´Ù¸®°Ô ÇÑ´Ù.
+					wait(); // COOKï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 					Thread.sleep(500);
 				} catch(InterruptedException e) {}	
 		}
 		dishes.add(dish);
-		notify();  // ±â´Ù¸®°í ÀÖ´Â CUST¸¦ ±ú¿ì±â À§ÇÔ.
+		notify();  // ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ CUSTï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		System.out.println("Dishes:" + dishes.toString());
 	}
 
@@ -60,7 +62,7 @@ class Table2 {
 			while(dishes.size()==0) {
 					System.out.println(name+" is waiting.");
 					try {
-						wait(); // CUST¾²·¹µå¸¦ ±â´Ù¸®°Ô ÇÑ´Ù.
+						wait(); // CUSTï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 						Thread.sleep(500);
 					} catch(InterruptedException e) {}	
 			}
@@ -69,14 +71,14 @@ class Table2 {
 				for(int i=0; i<dishes.size();i++) {
 					if(dishName.equals(dishes.get(i))) {
 						dishes.remove(i);
-						notify(); // ÀáÀÚ°í ÀÖ´Â COOKÀ» ±ú¿ì±â À§ÇÔ 
+						notify(); // ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ö´ï¿½ COOKï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 						return;
 					}
-				} // for¹®ÀÇ ³¡
+				} // forï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 				try {
 					System.out.println(name+" is waiting.");
-					wait(); // ¿øÇÏ´Â À½½ÄÀÌ ¾ø´Â CUST¾²·¹µå¸¦ ±â´Ù¸®°Ô ÇÑ´Ù.
+					wait(); // ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ CUSTï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 					Thread.sleep(500);
 				} catch(InterruptedException e) {}	
 			} // while(true)

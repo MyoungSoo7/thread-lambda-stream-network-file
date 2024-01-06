@@ -1,4 +1,6 @@
-import java.io.*; 
+package com.lms.thread.file;
+
+import java.io.*;
 
 class Ex15_18 { 
 	public static void main(String[] args) { 
@@ -10,7 +12,7 @@ class Ex15_18 {
 		File dir = new File(args[0]); 
 
 		if(!dir.exists() || !dir.isDirectory()) {
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
+			System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½Ô´Ï´ï¿½.");
 			System.exit(0);
 		} 
 
@@ -18,7 +20,7 @@ class Ex15_18 {
 
 		for (int i = 0; i < list.length; i++) { 
 			String fileName = list[i].getName(); 
-			// ÆÄÀÏ¸í 
+			// ï¿½ï¿½ï¿½Ï¸ï¿½ 
 			String newFileName = "0000" + fileName; 
 			newFileName = newFileName.substring(newFileName.length() - 7); 
 			list[i].renameTo(new File(dir, newFileName)); 

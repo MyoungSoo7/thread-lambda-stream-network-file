@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_9 {

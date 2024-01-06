@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_17 {
@@ -15,7 +17,7 @@ class Ex15_17 {
 		String ext = "." + args[0];
 
 		delete(dir, ext);
-		System.out.println(deletedFiles + "°³ÀÇ ÆÄÀÏÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.");
+		System.out.println(deletedFiles + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 	} // end of main
 
 	public static void delete(File dir, String ext) {
@@ -30,10 +32,10 @@ class Ex15_17 {
 				if(filename.endsWith(ext)) {
 					System.out.print(filename);
 					if(files[i].delete()) {
-						System.out.println(" - »èÁ¦ ¼º°ø");
+						System.out.println(" - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 						deletedFiles++;     
 					} else
-						System.out.println(" - »èÁ¦ ½ÇÆÐ");
+						System.out.println(" - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 				} 
 			} // if(files[i].isDirectory()) {
 	} // end of delete

@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 import java.util.Arrays;
 
@@ -13,8 +15,8 @@ class Ex15_2 {
 		input  = new ByteArrayInputStream(inSrc);
 		output = new ByteArrayOutputStream();
 
-		input.read(temp,0,temp.length); // ÀÐ¾î ¿Â µ¥ÀÌÅÍ¸¦ ¹è¿­ temp¿¡ ´ã´Â´Ù.
-		output.write(temp,5, 5);        // temp[5]ºÎÅÍ 5°³ÀÇ µ¥ÀÌÅÍ¸¦ writeÇÑ´Ù.
+		input.read(temp,0,temp.length); // ï¿½Ð¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½è¿­ tempï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+		output.write(temp,5, 5);        // temp[5]ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ writeï¿½Ñ´ï¿½.
 
 		outSrc = output.toByteArray();
 

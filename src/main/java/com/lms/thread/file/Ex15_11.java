@@ -1,16 +1,18 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class Ex15_11 {
 	public static void main(String[] args) {
 		try {
 			FileReader fr = new FileReader("Ex15_11.java");
-//    ÀÌÅ¬¸³½º¿¡¼­´Â À­ ÁÙ ´ë½Å ¾Æ·¡ ÁÙ ÀÔ·Â
+//    ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½
 // 		FileReader fr = new FileReader(".\\src\\Ex15_11.java");
 			BufferedReader br = new BufferedReader(fr);
 
 			String line = "";
 			for(int i=1;(line = br.readLine())!=null;i++) { 
-				//  ";"¸¦ Æ÷ÇÔÇÑ ¶óÀÎÀ» Ãâ·ÂÇÑ´Ù.
+				//  ";"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 				if(line.indexOf(";")!=-1)	
 					 System.out.println(i+":"+line);
 			}

@@ -1,9 +1,11 @@
+package com.lms.thread.file;
+
 import java.io.*;
 
 class FileViewer {
 	public static void main(String args[]) throws IOException {
 		FileInputStream fis = new FileInputStream(args[0]);
-//	 ÀÌÅ¬¸³½º¿¡¼­´Â À­ ÁÙ ´ë½Å ¾Æ·¡ ÁÙ ÀÔ·ÂÇÏ°í Run(ctrl+F11)À¸·Î ½ÇÇà 
+//	 ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï°ï¿½ Run(ctrl+F11)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 //		FileInputStream fis = new FileInputStream(".\\src\\FileViewer.java");
 
 		int data = 0;

@@ -1,3 +1,5 @@
+package com.lms.thread.file;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -17,12 +19,12 @@ public class Ex15_20 {
 			list.add(u1);
 			list.add(u2);
 
-			// °´Ã¼¸¦ Á÷·ÄÈ­ÇÑ´Ù.
+			// ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½Ñ´ï¿½.
 			out.writeObject(u1);
 			out.writeObject(u2);
 			out.writeObject(list);
 			out.close();
-			System.out.println("Á÷·ÄÈ­°¡ Àß ³¡³µ½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		} catch(IOException e) {
 			e.printStackTrace();
 		}

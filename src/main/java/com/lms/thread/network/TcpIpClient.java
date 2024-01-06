@@ -1,3 +1,5 @@
+package com.lms.thread.network;
+
 import java.net.*;
 import java.io.*;
 
@@ -6,22 +8,22 @@ public class TcpIpClient {
 		try {
 			String serverIp = "127.0.0.1";
 
-			System.out.println("╪╜╧Ж©║ ©╛╟Ааъют╢о╢ы. ╪╜╧ЖIP :" + serverIp);
-			// ╪рдою╩ ╩Щ╪╨го©╘ ©╛╟Аю╩ ©Дц╩гя╢ы.
+			System.out.println("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╢о╢О©╫. О©╫О©╫О©╫О©╫IP :" + serverIp);
+			// О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫о©О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ц╩О©╫я╢О©╫.
 			Socket socket = new Socket(serverIp, 7777); 
 
-			// ╪рдоюг ют╥б╫╨ф╝╦╡ю╩ ╬Р╢б╢ы.
+			// О©╫О©╫О©╫О©╫О©╫О©╫ О©╫т╥б╫О©╫ф╝О©╫О©╫О©╫О©╫ О©╫О©╫б╢О©╫.
 			InputStream in = socket.getInputStream();
 			DataInputStream dis = new DataInputStream(in);
 
-			// ╪рдою╦╥н ╨нем ╧чю╨ ╣╔юлем╦╕ цБ╥бгя╢ы.
-			System.out.println("╪╜╧Ж╥н╨нем ╧чю╨ ╦ч╫цаЖ :"+dis.readUTF());      
-			System.out.println("©╛╟Аю╩ а╬╥Агу╢о╢ы.");
+			// О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫м╦О©╫ О©╫О©╫О©╫О©╫я╢О©╫.
+			System.out.println("О©╫О©╫О©╫О©╫О©╫н╨О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫ч╫О©╫О©╫О©╫ :"+dis.readUTF());      
+			System.out.println("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫у╢о╢О©╫.");
 
-			// ╫╨ф╝╦╡╟З ╪рдою╩ ╢щ╢б╢ы.
+			// О©╫О©╫ф╝О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫щ╢б╢О©╫.
 			dis.close();
 			socket.close();
-			System.out.println("©╛╟Аюл а╬╥А╣г╬З╫ю╢о╢ы.");
+			System.out.println("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫г╬О©╫О©╫О©╫О©╫о╢О©╫.");
 		} catch(ConnectException ce) {
 			ce.printStackTrace();
 		} catch(IOException ie) {

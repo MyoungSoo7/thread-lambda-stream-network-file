@@ -1,3 +1,5 @@
+package com.lms.thread;
+
 class Ex13_10 {
 	public static void main(String args[]) {
 		RunImplEx10 r = new RunImplEx10();
@@ -10,13 +12,13 @@ class Ex13_10 {
 
 		try {
 			Thread.sleep(2000);
-			th1.suspend();	// ¾²·¹µå th1À» Àá½Ã Áß´Ü½ÃÅ²´Ù.
+			th1.suspend();	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ß´Ü½ï¿½Å²ï¿½ï¿½.
 			Thread.sleep(2000);
 			th2.suspend();
 			Thread.sleep(3000);
-			th1.resume();	// ¾²·¹µå th1ÀÌ ´Ù½Ã µ¿ÀÛÇÏµµ·Ï ÇÑ´Ù.
+			th1.resume();	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 			Thread.sleep(3000);
-			th1.stop();		// ¾²·¹µå th1À» °­Á¦Á¾·á½ÃÅ²´Ù.
+			th1.stop();		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
 			th2.stop();
 			Thread.sleep(2000);
 			th3.stop();
